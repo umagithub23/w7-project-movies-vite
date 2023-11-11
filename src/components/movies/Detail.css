@@ -1,0 +1,106 @@
+.detail-page {
+  position: relative;
+}
+
+.detail-page .back-link {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 10px;
+  filter: drop-shadow(2px 3px 4px rgb(0 0 0 / 0.5));
+}
+
+.detail-page .back-link svg {
+  width: 30px;
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.detail-page .back-link:hover svg {
+  margin-right: 5px;
+}
+
+.detail-page .background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.detail-page img {
+  border: 5px solid #fff;
+  width: 200px;
+}
+
+.detail-page .summary {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.detail-page .details {
+  margin-left: 0;
+}
+
+.detail-page .details h1 {
+  text-shadow: 1px 1px rgb(77, 77, 77);
+}
+
+.detail-page .details .title {
+  margin-right: 10px;
+}
+
+.detail-page .details p {
+  max-width: 400px;
+}
+
+.detail-page .rating {
+  color: black;
+  font-weight: 500;
+  background: white;
+  padding: 0 5px;
+  text-shadow: none;
+  display: inline-block;
+}
+
+.detail-page .rating:before {
+  content: url("../../assets/star.svg");
+  padding-right: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 16px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/*https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .detail-page .summary {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 50px;
+  }
+
+  .detail-page .details {
+    margin-left: 20px;
+  }
+
+  .detail-page img {
+    width: 250px;
+  }
+}
+
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .detail-page img {
+    width: initial;
+  }
+}
